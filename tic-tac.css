@@ -1,0 +1,81 @@
+/* Global Reset and Box-sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --orange: #F2C14E;
+    --winning-blocks: #2d414b;
+}
+
+/* Body Styling */
+body {
+    color: var(--orange);
+    font-family: 'Finger Paint', cursive;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+}
+
+/* Container Styling */
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+}
+
+/* Gameboard Styling */
+#gameboard {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* Box Styling */
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-last-child(-n+3) {
+    border-bottom: none;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: #333;
+    border: 2px solid var(--orange);
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 200ms;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
